@@ -21,7 +21,7 @@ const octokit = new Octokit({
 });
 
 const open = async ({owner, repo, title, body}) => {
-  try {    
+  try {
     console.log('opening issue');
     const res = await octokit.request('POST /repos/{owner}/{repo}/issues', {
       owner,
